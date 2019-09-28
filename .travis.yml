@@ -11,7 +11,7 @@ scripts:
 
 after_success:
   - docker build -t jtraille07/multi-client ./client
-  - docker bulid -t jtraille07/multi-nginx ./nginx
+  - docker build -t jtraille07/multi-nginx ./nginx
   - docker build -t jtraille07/multi-server ./server
   - docker build -t jtraille07/multi-worker ./worker
   # Log in to the docker CLI
