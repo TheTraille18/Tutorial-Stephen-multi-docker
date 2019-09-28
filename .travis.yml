@@ -21,3 +21,18 @@ after_success:
   - docker push jtraille07/multi-nginx
   - docker push jtraille07/multi-server
   - docker push jtraille07/multi-worker
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucker_name: elasticbeanstalk-us-east-1-398080922284
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
