@@ -6,21 +6,21 @@
             "image": "jtraille07/multi-client",
             "hostname": "client",
             "essential": false,
-            "memory": 256
+            "memory": 512
         },
         {
             "name": "server",
             "image": "jtraille07/multi-server",
             "hostname": "api",
             "essential": false,
-            "memory": 256
+            "memory": 512
         },
         {
             "name": "worker",
             "image": "jtraille07/multi-worker",
             "hostname": "worker",
             "essential": false,
-            "memory": 256
+            "memory": 512
         },
         {
             "name": "nginx",
@@ -34,7 +34,7 @@
                 }
             ],
             "links": ["client", "server"],
-            "memory": 256
+            "memory": 512
         }
     ]
 }
